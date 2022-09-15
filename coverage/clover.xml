@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<coverage generated="1663223826993" clover="3.2.0">
+  <project timestamp="1663223826994" name="All files">
+    <metrics statements="23" coveredstatements="20" conditionals="12" coveredconditionals="8" methods="4" coveredmethods="4" elements="39" coveredelements="32" complexity="0" loc="23" ncloc="23" packages="2" files="2" classes="2"/>
+    <package name="client">
+      <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+      <file name="getPerson.js" path="D:\Personal\PROYECTOS\aws-node-api\src\client\getPerson.js">
+        <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="5" count="1" type="stmt"/>
+        <line num="7" count="1" type="stmt"/>
+        <line num="11" count="1" type="stmt"/>
+      </file>
+    </package>
+    <package name="db">
+      <metrics statements="20" coveredstatements="17" conditionals="12" coveredconditionals="8" methods="3" coveredmethods="3"/>
+      <file name="dynamodb.js" path="D:\Personal\PROYECTOS\aws-node-api\src\db\dynamodb.js">
+        <metrics statements="20" coveredstatements="17" conditionals="12" coveredconditionals="8" methods="3" coveredmethods="3"/>
+        <line num="3" count="1" type="stmt"/>
+        <line num="5" count="1" type="cond" truecount="1" falsecount="1"/>
+        <line num="6" count="1" type="stmt"/>
+        <line num="13" count="1" type="stmt"/>
+        <line num="15" count="1" type="stmt"/>
+        <line num="17" count="1" type="stmt"/>
+        <line num="24" count="1" type="stmt"/>
+        <line num="26" count="1" type="cond" truecount="3" falsecount="1"/>
+        <line num="27" count="0" type="stmt"/>
+        <line num="32" count="1" type="stmt"/>
+        <line num="36" count="1" type="stmt"/>
+        <line num="41" count="1" type="stmt"/>
+        <line num="43" count="1" type="cond" truecount="1" falsecount="1"/>
+        <line num="44" count="0" type="stmt"/>
+        <line num="49" count="1" type="stmt"/>
+        <line num="53" count="1" type="stmt"/>
+        <line num="57" count="1" type="stmt"/>
+        <line num="59" count="1" type="cond" truecount="3" falsecount="1"/>
+        <line num="60" count="0" type="stmt"/>
+        <line num="65" count="1" type="stmt"/>
+      </file>
+    </package>
+  </project>
+</coverage>

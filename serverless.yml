@@ -1,0 +1,48 @@
+service: aws-node-api
+frameworkVersion: '3'
+
+plugins:
+  - serverless-bundle
+  - serverless-pseudo-parameters
+
+provider:
+  name: aws
+  runtime: nodejs14.x
+  stage: ${opt:stage, 'dev'}
+  region: us-west-2
+  environment:
+    VEHICLE_TABLE_NAME: ${self:custom.VehicleTable.name}
+  iamRoleStatements:
+    - ${file(iam/VehicleTableIAM.yml):VehicleTableIAM}
+resources:
+  Resources:
+    VehicleTable: ${file(resources/VehicleTable.yml):VehicleTable}
+  
+functions:
+  createVehicle:
+    handler: src/handlers/createVehicle.handler
+    events:
+      - http:
+          method: POST
+          path: /vehicles
+  
+  getVehicles:
+    handler: src/handlers/getVehicles.handler
+    events:
+      - http:
+          method: GET
+          path: /vehicles
+
+  getVehicle:
+    handler: src/handlers/getVehicle.handler
+    events:
+      - http:
+          method: GET
+          path: /vehicles/{id}
+
+custom:
+  VehicleTable:
+    name: !Ref VehicleTable
+    arn: !GetAtt VehicleTable.Arn
+  bundle:
+    linting: false

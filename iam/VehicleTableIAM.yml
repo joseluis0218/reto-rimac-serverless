@@ -1,0 +1,8 @@
+VehicleTableIAM:
+  Effect: Allow
+  Action:
+    - dynamodb:PutItem
+    - dynamodb:Scan
+    - dynamodb:GetItem
+  Resource:
+    - ${self:custom.VehicleTable.arn}
